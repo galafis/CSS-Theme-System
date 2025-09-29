@@ -1,16 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 
+        Dynamic Theme Management System
+        @author Gabriel Demetrios Lafis
+        Sistema de gerenciamento dinâmico de temas com suporte a múltiplas paletas e modo escuro/claro
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS-Theme-System</title>
+    <title>CSS-Theme-System - Dynamic Theme Switcher</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Container principal da aplicação -->
     <div class="container">
+        <!-- Cabeçalho com título do sistema -->
         <h1>Dynamic Theme Management System</h1>
-        <button class="btn">Sample Button</button>
-        <div class="author">Created by Gabriel Demetrios Lafis</div>
+        
+        <!-- Painel de controle de temas -->
+        <div class="theme-controls">
+            <!-- Seleção de paleta de cores -->
+            <div class="control-group">
+                <label for="theme-select">Escolha uma Paleta:</label>
+                <select id="theme-select" class="theme-selector">
+                    <option value="blue">🔵 Tema Azul (Padrão)</option>
+                    <option value="green">🟢 Tema Verde</option>
+                    <option value="orange">🟠 Tema Laranja</option>
+                </select>
+            </div>
+            
+            <!-- Controle de modo claro/escuro -->
+            <div class="control-group">
+                <label for="mode-toggle">Modo:</label>
+                <button id="mode-toggle" class="btn mode-btn" aria-label="Alternar entre modo claro e escuro">
+                    🌙 Modo Escuro
+                </button>
+            </div>
+        </div>
+        
+        <!-- Área de demonstração dos estilos aplicados -->
+        <div class="demo-section">
+            <h2>Demonstração</h2>
+            <p>Este é um exemplo de texto com os estilos do tema atual aplicados.</p>
+            <button class="btn">Botão de Exemplo</button>
+            <button class="btn btn-secondary">Botão Secundário</button>
+        </div>
+        
+        <!-- Informações sobre o tema atual -->
+        <div class="theme-info">
+            <h3>Tema Atual:</h3>
+            <div class="color-display">
+                <div class="color-box" id="primary-color-box">
+                    <span>Cor Primária</span>
+                </div>
+                <div class="color-box" id="secondary-color-box">
+                    <span>Cor Secundária</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rodapé com autoria -->
+        <div class="author">
+            <p>Created by Gabriel Demetrios Lafis</p>
+            <p class="author-subtitle">Sistema de Temas Dinâmicos com CSS Custom Properties e JavaScript</p>
+        </div>
     </div>
+    
+    <!-- Script de gerenciamento de temas -->
+    <script src="theme-switcher.js"></script>
 </body>
 </html>
