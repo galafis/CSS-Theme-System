@@ -1,3 +1,4 @@
+
 /**
  * Dynamic Theme Switcher with LocalStorage Persistence
  * @author Gabriel Demetrios Lafis
@@ -317,3 +318,4 @@ console.log('📍 Para verificar o status atual, use: themeManager.getStatus()')
 // ============================================================================
 // FIM DO ARQUIVO
 // ============================================================================
+
