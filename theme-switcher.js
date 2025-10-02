@@ -1,4 +1,3 @@
-
 /**
  * Dynamic Theme Switcher with LocalStorage Persistence
  * @author Gabriel Demetrios Lafis
@@ -31,15 +30,15 @@ const themes = {
   // Tema Verde - Paleta com tons de verde água e esmeralda
   green: {
     name: 'Verde',
-    primary: '#11998e',
-    secondary: '#38ef7d'
+    primary: '#38a169',
+    secondary: '#68d391'
   },
   
   // Tema Laranja - Paleta com tons de rosa e coral
   orange: {
     name: 'Laranja',
-    primary: '#ff9a9e',
-    secondary: '#fecfef'
+    primary: '#ed8936',
+    secondary: '#f6ad55'
   }
 };
 

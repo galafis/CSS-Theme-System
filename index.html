@@ -1,72 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 
-        Dynamic Theme Management System
-        @author Gabriel Demetrios Lafis
-        Sistema de gerenciamento dinâmico de temas com suporte a múltiplas paletas e modo escuro/claro
-    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS-Theme-System - Dynamic Theme Switcher</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Container principal da aplicação -->
-    <div class="container">
-        <!-- Cabeçalho com título do sistema -->
-        <h1>Dynamic Theme Management System</h1>
-        
-        <!-- Painel de controle de temas -->
-        <div class="theme-controls">
-            <!-- Seleção de paleta de cores -->
-            <div class="control-group">
-                <label for="theme-select">Escolha uma Paleta:</label>
-                <select id="theme-select" class="theme-selector">
-                    <option value="blue">🔵 Tema Azul (Padrão)</option>
-                    <option value="green">🟢 Tema Verde</option>
-                    <option value="orange">🟠 Tema Laranja</option>
-                </select>
+    <header class="hero">
+        <div class="container">
+            <h1>CSS Theme System</h1>
+            <p>Um sistema dinâmico de gerenciamento de temas CSS, utilizando <strong>CSS Custom Properties</strong> para criar interfaces adaptáveis e personalizáveis.</p>
+            <div class="hero-actions">
+                <a href="https://github.com/galafis/CSS-Theme-System" target="_blank" class="btn primary-btn"><i class="fab fa-github"></i> Ver Repositório</a>
+                <a href="https://github.com/galafis/CSS-Theme-System/blob/main/README.md" target="_blank" class="btn secondary-btn"><i class="fas fa-book"></i> Documentação</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <section class="features-section">
+            <h2>Recursos Principais</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-palette"></i>
+                    <h3>Múltiplas Paletas</h3>
+                    <p>Alterne entre diferentes esquemas de cores pré-definidos com facilidade.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-moon"></i>
+                    <h3>Modo Claro/Escuro</h3>
+                    <p>Suporte integrado para alternância entre temas claros e escuros.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Customização Flexível</h3>
+                    <p>Utiliza CSS Custom Properties para fácil adaptação e extensão.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Design Responsivo</h3>
+                    <p>Otimizado para funcionar perfeitamente em qualquer dispositivo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="theme-demo-section">
+            <h2>Demonstração Interativa</h2>
+            <div class="theme-controls card">
+                <div class="control-group">
+                    <label for="theme-select">Escolha uma Paleta:</label>
+                    <select id="theme-select" class="theme-selector">
+                        <option value="blue">🔵 Tema Azul (Padrão)</option>
+                        <option value="green">🟢 Tema Verde</option>
+                        <option value="orange">🟠 Tema Laranja</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="mode-toggle">Modo:</label>
+                    <button id="mode-toggle" class="btn mode-btn" aria-label="Alternar entre modo claro e escuro">
+                        🌙 Modo Escuro
+                    </button>
+                </div>
             </div>
             
-            <!-- Controle de modo claro/escuro -->
-            <div class="control-group">
-                <label for="mode-toggle">Modo:</label>
-                <button id="mode-toggle" class="btn mode-btn" aria-label="Alternar entre modo claro e escuro">
-                    🌙 Modo Escuro
-                </button>
-            </div>
-        </div>
-        
-        <!-- Área de demonstração dos estilos aplicados -->
-        <div class="demo-section">
-            <h2>Demonstração</h2>
-            <p>Este é um exemplo de texto com os estilos do tema atual aplicados.</p>
-            <button class="btn">Botão de Exemplo</button>
-            <button class="btn btn-secondary">Botão Secundário</button>
-        </div>
-        
-        <!-- Informações sobre o tema atual -->
-        <div class="theme-info">
-            <h3>Tema Atual:</h3>
-            <div class="color-display">
-                <div class="color-box" id="primary-color-box">
-                    <span>Cor Primária</span>
+            <div class="demo-section card">
+                <h3>Exemplo de Componentes</h3>
+                <p>Este é um exemplo de texto com os estilos do tema atual aplicados. Observe como as cores e a tipografia se adaptam.</p>
+                <button class="btn primary-btn">Botão Primário</button>
+                <button class="btn secondary-btn">Botão Secundário</button>
+                <div class="alert info-alert">
+                    <i class="fas fa-info-circle"></i> Esta é uma mensagem informativa com o tema atual.
                 </div>
-                <div class="color-box" id="secondary-color-box">
-                    <span>Cor Secundária</span>
+                <div class="alert success-alert">
+                    <i class="fas fa-check-circle"></i> Ação realizada com sucesso!
                 </div>
             </div>
-        </div>
-        
-        <!-- Rodapé com autoria -->
-        <div class="author">
-            <p>Created by Gabriel Demetrios Lafis</p>
-            <p class="author-subtitle">Sistema de Temas Dinâmicos com CSS Custom Properties e JavaScript</p>
-        </div>
+        </section>
     </div>
     
-    <!-- Script de gerenciamento de temas -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Gabriel Demetrios Lafis. Todos os direitos reservados.</p>
+            <p class="author-subtitle">Sistema de Temas Dinâmicos com CSS Custom Properties e JavaScript</p>
+        </div>
+    </footer>
+    
     <script src="theme-switcher.js"></script>
 </body>
 </html>
+
